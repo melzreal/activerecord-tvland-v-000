@@ -7,7 +7,7 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    Character.map{|a| a.id = self.id }
+    self.characters.map{|a| a.name = a.show.name }
   end
 
 end
